@@ -347,6 +347,7 @@ function updateUndoRedoResetBtns() {
 function updateImageDims() {
     $("#imageHeight").val(entity.selectedAsset.height);
     $("#imageWidth").val(entity.selectedAsset.width);
+    //** */
 }
 
 function onLoad() {
