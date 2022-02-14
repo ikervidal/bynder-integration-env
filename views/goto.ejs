@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+
+<head>
+    <% include partials/head %>
+    <% include partials/script %>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+</head>
+
+<body style="height: 100%;">
+    <div class="container h-100" style="height: 100%;">
+        <div class="row justify-content-center" style="height: 100%;">
+            <div class="col-6 align-self-center">
+                <div class="container">
+                    <div class="row mb-4">
+                        <img src="/oauth/logo.png" alt="Icon" width="80">
+                    </div>
+                    <div class="row mb-4">
+                        <h5>This application is for use in the Salesforce Marketing Cloud Content Builder Editor only.
+                        </h5>
+                    </div>
+                    <div class="row">
+                        <span id="myHref" style="color: #00b3ff;"><a href="#"><b>Go to Content Builder</b> <i class="fas fa-chevron-right"></i></a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $("#myHref").on('click', function () {
+            window.top.location.href = "https://mc.s50.exacttarget.com/cloud/#app/Content%20Builder/";
+        });
+    </script>
+</body>
+
+</html>

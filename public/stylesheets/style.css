@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+body {
+  word-wrap: break-word;
+  font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+html {
+  background: none !important;
+}
+
+.bg-3 {
+  background-color: #ffffff;
+  color: #555555;
+}
+
+.container-fluid {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+#contentEditor {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#contentEditor button {
+  background: rgba(0, 34, 51, 0.03) !important;
+  border: 1px solid rgba(0, 34, 51, 0.10) !important;
+  border-radius: 5px !important;
+}
+
+#contentEditor button:hover:enabled {
+  color: rgba(0,34,51,0.65) !important;
+}
+
+#contentEditor .saveButton {
+  background: rgba(51, 128, 255) !important;
+  color: rgb(255, 255, 255) !important;
+}
+
+#confirmationModal button {
+  border: 1px solid #ced4da !important;
+}
+
+#confirmationModal .input-group {
+  margin-bottom: 5px !important;
+}
+
+#confirmationModal .input-group-prepend span {
+  width: 80px !important;
+  display: block !important;
+}
+
+#confirmationModal .input-group-append button {
+  border-radius: 0px 5px 5px 0px !important;
+}
+
+.highlight {
+  background: rgba(51, 128, 255) !important;
+  color: rgb(255, 255, 255) !important;
+}

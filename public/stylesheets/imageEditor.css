@@ -1,0 +1,207 @@
+.btn {
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+
+label.btn {
+  margin-bottom: 0;
+}
+
+.img-container {
+  margin-bottom: 1rem;
+  max-height: 100%;
+  min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  .img-container {
+    height: auto;
+  }
+  .container {
+    max-width: 815px !important;
+
+  }
+}
+
+.img-container>img {
+  max-width: 100%;
+}
+
+.docs-buttons>.btn, .docs-buttons>.btn-group, .docs-buttons>.form-control {
+  margin-bottom: .5rem;
+  margin-right: .25rem;
+}
+
+.docs-toggles>.btn, .docs-toggles>.btn-group, .docs-toggles>.dropdown {
+  margin-bottom: .5rem;
+}
+
+.docs-tooltip {
+  display: block;
+  margin: -.5rem -.75rem;
+  padding: .5rem .75rem;
+}
+
+.docs-tooltip>.icon {
+  margin: 0 -.25rem;
+  vertical-align: top;
+}
+
+.tooltip-inner {
+  white-space: normal;
+}
+@media (max-width: 400px) {
+  .btn-group-crop {
+    margin-right: -1rem!important;
+  }
+  .btn-group-crop>.btn {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+  .btn-group-crop .docs-tooltip {
+    margin-left: -.5rem;
+    margin-right: -.5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+}
+
+.docs-cropped .modal-body {
+  text-align: center;
+}
+
+.docs-cropped .modal-body>img, .docs-cropped .modal-body>canvas {
+  max-width: 100%;
+}
+
+.spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.input-group-prepend>label {
+  min-width: 60px;
+}
+
+.legend {
+  border: 2px solid;
+  border-top: none;
+  padding: 0.5em;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-color: #ccc;
+}
+
+.legend>h1 {
+  font: 1em normal;
+  margin: -1em -0.5em 0;
+  color:grey;
+}
+
+.legend>h1>span {
+  float: left;
+}
+
+.legend>h1:before {
+  border-top: 2px solid;
+  content: ' ';
+  float: left;
+  margin: 0.5em 2px 0 -1px;
+  width: 0.75em;
+  border-radius: 5px 0 0 0;
+  border-color: #ccc;
+}
+
+.legend>h1:after {
+  border-top: 2px solid;
+  content: ' ';
+  display: block;
+  height: 1.5em;
+  left: 2px;
+  margin: 0 1px 0 0;
+  overflow: hidden;
+  position: relative;
+  top: 0.5em;
+  border-radius: 0 5px 0 0;
+  border-color: #ccc;
+}
+
+.cropper-modal {
+  background-color: #fff !important;
+}
+
+.cropper-view-box {
+  outline: 1px solid #ccc !important;
+  outline-color: rgba(214, 214, 214, 0.75) !important;
+}
+
+.cropper-line {
+  background-color: #ccc !important;
+}
+
+.cropper-point {
+  opacity: 1 !important;
+  background-color: #fff !important;
+  border: 1px solid #ccc !important;
+  border-radius: 10px !important;
+}
+
+.cropper-point.point-e {
+  margin-top: -14px !important;
+  top: 47% !important;
+  right: -7px !important;
+  width: 15px !important;
+  height: 30px !important;
+}
+
+.cropper-point.point-n {
+  margin-left: -14px !important;
+  left: 47% !important;
+  top: -7px !important;
+  width: 30px !important;
+  height: 15px !important;
+}
+
+.cropper-point.point-w {
+  margin-top: -14px !important;
+  top: 47% !important;
+  left: -7px !important;
+  width: 15px !important;
+  height: 30px !important;
+}
+
+.cropper-point.point-s {
+  margin-left: -14px !important;
+  left: 47% !important;
+  bottom: -7px !important;
+  width: 30px !important;
+  height: 15px !important;
+}
+
+.cropper-point.point-ne {
+  top: -7px !important;
+  right: -7px !important;
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.cropper-point.point-nw {
+  top: -7px !important;
+  left: -7px !important;
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.cropper-point.point-sw {
+  bottom: -7px !important;
+  left: -7px !important;
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.cropper-point.point-se {
+  right: -7px !important;
+  bottom: -7px !important;
+  width: 15px !important;
+  height: 15px !important;
+} 

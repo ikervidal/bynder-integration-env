@@ -1,0 +1,30 @@
+<div class="modal" tabindex="-1" role="dialog" id="confirmationModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p></p>
+                <div id="copyUrl" class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">original</span>
+                      </div>
+                    <input type="url" class="form-control" placeholder="Asset URL" aria-label="Asset URL" aria-describedby="copyButton">
+                    <div class="input-group-append">
+                        <button id="copyButton" title="Copy URL" onclick="copyToClipboard('copyUrl')" type="button" class="btn btn-outline-primary">
+                            <i class="fa fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="prevUrls"></div>
+            </div>
+            <div class="modal-footer">
+                <button id="closeBtn" type="button" class="btn highlight" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
