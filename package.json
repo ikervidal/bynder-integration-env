@@ -2,7 +2,7 @@
   "name": "bynder-sfmc",
   "version": "1.0.0",
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "npm install && node ./bin/www",
     "debug": "nodemon  -e css,js,ejs,html --inspect ./bin/www"
   },
   "dependencies": {
