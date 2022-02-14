@@ -345,9 +345,13 @@ function updateUndoRedoResetBtns() {
 }
 
 function updateImageDims() {
+    console.log('entity.selectedAsset.height');
+    console.log(entity.selectedAsset.height);
+    console.log('entity.selectedAsset.width');
+    console.log(entity.selectedAsset.width);
     $("#imageHeight").val(entity.selectedAsset.height);
     $("#imageWidth").val(entity.selectedAsset.width);
-    //** */
+    
 }
 
 function onLoad() {
