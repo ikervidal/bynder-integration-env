@@ -356,8 +356,9 @@ function updateUndoRedoResetBtns() {
 }
 
 function updateImageDims() {
-    $("#imageHeight").val(entity.selectedAsset.height);
-    $("#imageWidth").val(entity.selectedAsset.width);    
+    var cropBoxData = cropper.getCropBoxData();
+    $("#imageHeight").val(cropBoxData.height);
+    $("#imageWidth").val(cropBoxData.width);    
 }
 
 function updateCropImageDims() {
@@ -496,22 +497,13 @@ function onLoad() {
     $('#dataHeight').on('change', function () {
         console.log('data Height change');
         var cropData = cropper.getCropBoxData();
-        console.log('cropData');
-        console.log(cropData);
-        console.log('dataHeight');
-        console.log(dataHeight.value);
-        console.log('dataWidth');
-        console.log(dataWidth.value);
-        cropData.height = dataHeight.value !== '' ? parseFloat(dataHeight.value) : 0;
-        cropData.width = dataWidth.value !== '' ? parseFloat(dataWidth.value) : 0;
+
+        cropData.height = dataHeight.value !== '' ? Number(dataHeight.value) : 0;
+        cropData.width = dataWidth.value !== '' ? Number(dataWidth.value) : 0;
         //var ratio = document.getElementById('imageToCrop').cropper.imageData.width /  document.getElementById('imageToCrop').cropper.imageData.naturalWidth; 
-        console.log('2 - cropData');
-        console.log(cropData);
-        console.log('bef-cropper');
-        console.log(cropper);
+
         cropper.setCropBoxData(cropData);
-        console.log('afte-cropper');
-        console.log(cropper);
+        updateEditor();
         
     });
 
