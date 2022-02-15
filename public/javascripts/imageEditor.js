@@ -35,6 +35,7 @@ function updateEditor() {
     updateUndoRedoResetBtns();
     setCropBoxPosition();
     updateImageDims();
+    updateCropImageDims();
 }
 
 function buildAsset() {
