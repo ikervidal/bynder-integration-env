@@ -9,6 +9,7 @@ var sdk;
 var cropper;
 
 function setAsset() {
+    console.log('setAsset');
     sdk.setContent(buildAsset());
     sdk.setData(entity);
     updateEditor();
@@ -27,6 +28,7 @@ function saveChange() {
 }
 
 function updateEditor() {
+    console.log('updateEditor');
     updateSaveCropButton();
     updateScaleToFit();
     updateLink();
@@ -36,6 +38,7 @@ function updateEditor() {
 }
 
 function buildAsset() {
+    console.log('buildAsset');
     var asset = entity.selectedAsset;
 
     var height = entity.selectedAsset.height;
@@ -112,12 +115,14 @@ function saveCroppingToSFMC(asset) {
 }
 
 function updateSaveCropButton() {
+    console.log('updateSaveCropButton');
     if (entity.selectedAsset) {
         $('#saveCroppingButton').prop("disabled", !entity.selectedAsset.isCropped);
     }
 }
 
 function saveCropBoxData(element) {
+    console.log('saveCropBoxData');
     // Save the cropping box position
     var cropBoxData = cropper.getCropBoxData();
     element.options.cropBoxPosition = {
@@ -302,6 +307,7 @@ function saveLink() {
 }
 
 function setCropBoxPosition() {
+    console.log('setCropBoxPosition');
     if (entity.options.cropBoxPosition && cropper) {
         var cropBoxData = {
             top: entity.options.cropBoxPosition.top,
@@ -314,6 +320,7 @@ function setCropBoxPosition() {
 }
 
 function resetEdit() {
+    console.log('resetEdit');
     if (changes.length > 1) {
         chgPos = 0;
         entity = _.cloneDeep(initial);
@@ -323,6 +330,7 @@ function resetEdit() {
 }
 
 function undoEdit() {
+    console.log('undoEdit');
     if (chgPos > 0) {
         --chgPos;
         entity = _.cloneDeep(changes[chgPos]);
@@ -355,6 +363,7 @@ function updateImageDims() {
 }
 
 function onLoad() {
+    console.log('onLoad');
     $('#spinner').show();
     $('#savingSpinner').hide();
 
@@ -684,11 +693,13 @@ function onLoad() {
 }
 
 function onLoaded() {
+    console.log('onLoaded');
     $('#spinner').hide();
     updateEditor();
 }
 
 function onInit() {
+    console.log('onInit');
     sdk = new window.sfdc.BlockSDK({
         blockEditorWidth: 850,
         tabs: ['stylingblock', 'htmlblock']
