@@ -362,8 +362,8 @@ function updateImageDims() {
 
 function updateCropImageDims() {
     var cropBoxData = cropper ? cropper.getCropBoxData() : { height: null, width: null };
-    $("#dataHeight").val(cropBoxData.height);
-    $("#dataWidth").val(cropBoxData.width);
+    $("#dataHeight").val(Math.round(cropBoxData.height));
+    $("#dataWidth").val(Math.round(cropBoxData.width));
 }
 
 function onLoad() {
