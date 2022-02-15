@@ -23,7 +23,7 @@ function saveChange() {
     } else {
         changes = changes.slice(1);
     }
-    
+
     changes.push(_.cloneDeep(entity));
 }
 
@@ -356,15 +356,15 @@ function updateUndoRedoResetBtns() {
 }
 
 function updateImageDims() {
-    var cropBoxData = cropper.getCropBoxData();
+    var cropBoxData = cropper ? cropper.getCropBoxData() : { height: null, width: null };
     $("#imageHeight").val(cropBoxData.height);
-    $("#imageWidth").val(cropBoxData.width);    
+    $("#imageWidth").val(cropBoxData.width);
 }
 
 function updateCropImageDims() {
     console.log(entity.selectedAsset);
     $("#dataHeight").val(entity.selectedAsset.height);
-    $("#dataWidth").val(entity.selectedAsset.width);  
+    $("#dataWidth").val(entity.selectedAsset.width);
 }
 
 function onLoad() {
@@ -396,7 +396,7 @@ function onLoad() {
 
     var btnLockDataProps = $('#lockDataProps');
     var dataPropsLocked = false;
-    
+
     var options = {
         autoCropArea: 1,
         minContainerWidth: 800,
@@ -504,7 +504,7 @@ function onLoad() {
 
         cropper.setCropBoxData(cropData);
         updateEditor();
-        
+
     });
 
     $('#dataWidth').on('change', function () {
