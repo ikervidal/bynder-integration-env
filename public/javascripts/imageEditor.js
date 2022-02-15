@@ -485,16 +485,34 @@ function onLoad() {
     $('#dataHeight').on('change', function () {
         console.log('data Height change');
         var cropData = cropper.getCropBoxData();
+        console.log('cropData');
+        console.log(cropData);
+        console.log('dataHeight');
+        console.log(dataHeight.value);
+        console.log('dataWidth');
+        console.log(dataWidth.value);
         cropData.height = dataHeight.value !== '' ? Number(dataHeight.value) : 0;
         cropData.width = dataWidth.value !== '' ? Number(dataWidth.value) : 0;
+
+        console.log('2 - cropData');
+        console.log(cropData);
         cropper.setCropBoxData(cropData);
     });
 
     $('#dataWidth').on('change', function () {
         console.log('data Width change');
         var cropData = cropper.getCropBoxData();
+        console.log('cropData');
+        console.log(cropData);
+        console.log('dataHeight');
+        console.log(dataHeight.value);
+        console.log('dataWidth');
+        console.log(dataWidth.value);
         cropData.height = dataHeight.value !== '' ? Number(dataHeight.value) : 0;
         cropData.width = dataWidth.value !== '' ? Number(dataWidth.value) : 0;
+
+        console.log('2 - cropData');
+        console.log(cropData);
         cropper.setCropBoxData(cropData);
     });
 
