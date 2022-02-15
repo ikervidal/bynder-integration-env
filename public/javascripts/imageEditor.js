@@ -355,13 +355,14 @@ function updateUndoRedoResetBtns() {
 }
 
 function updateImageDims() {
-    console.log('entity.selectedAsset.height');
-    console.log(entity.selectedAsset.height);
-    console.log('entity.selectedAsset.width');
-    console.log(entity.selectedAsset.width);
     $("#imageHeight").val(entity.selectedAsset.height);
-    $("#imageWidth").val(entity.selectedAsset.width);
-    
+    $("#imageWidth").val(entity.selectedAsset.width);    
+}
+
+function updateCropImageDims() {
+    console.log(entity.selectedAsset);
+    $("#dataHeight").val(entity.selectedAsset.height);
+    $("#dataWidth").val(entity.selectedAsset.width);  
 }
 
 function onLoad() {
@@ -503,7 +504,6 @@ function onLoad() {
         cropData.height = dataHeight.value !== '' ? parseFloat(dataHeight.value) : 0;
         cropData.width = dataWidth.value !== '' ? parseFloat(dataWidth.value) : 0;
         //var ratio = document.getElementById('imageToCrop').cropper.imageData.width /  document.getElementById('imageToCrop').cropper.imageData.naturalWidth; 
-
         console.log('2 - cropData');
         console.log(cropData);
         console.log('bef-cropper');
