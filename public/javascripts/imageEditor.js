@@ -402,6 +402,8 @@ function onLoad() {
         guides: false,
         center: false,
         crop: function (e) {
+            console.log('e');
+            console.log(e);
             var data = e.detail;
             console.log('init data height: ');
             console.log(Math.round(data.height));
