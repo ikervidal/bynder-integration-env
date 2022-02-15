@@ -403,7 +403,10 @@ function onLoad() {
         center: false,
         crop: function (e) {
             var data = e.detail;
-
+            console.log('init data height: ');
+            console.log(Math.round(data.height));
+            console.log('init data width: ');
+            console.log(Math.round(data.width));
             dataHeight.value = Math.round(data.height);
             dataWidth.value = Math.round(data.width);
         },
