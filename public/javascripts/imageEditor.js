@@ -506,8 +506,12 @@ function onLoad() {
 
         console.log('2 - cropData');
         console.log(cropData);
+        console.log('bef-cropper');
+        console.log(cropper);
         cropper.setCropBoxData(cropData);
-        saveCropBoxData();
+        console.log('afte-cropper');
+        console.log(cropper);
+        
     });
 
     $('#dataWidth').on('change', function () {
