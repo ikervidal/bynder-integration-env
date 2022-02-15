@@ -125,6 +125,8 @@ function saveCropBoxData(element) {
     console.log('saveCropBoxData');
     // Save the cropping box position
     var cropBoxData = cropper.getCropBoxData();
+    console.log('cropBoxData');
+    console.log(cropBoxData);
     element.options.cropBoxPosition = {
         top: cropBoxData.top,
         left: cropBoxData.left,
