@@ -483,6 +483,7 @@ function onLoad() {
     });
 
     $('#dataHeight').on('change', function () {
+        console.log('data Height change');
         var cropData = cropper.getCropBoxData();
         cropData.height = dataHeight.value !== '' ? Number(dataHeight.value) : 0;
         cropData.width = dataWidth.value !== '' ? Number(dataWidth.value) : 0;
@@ -490,6 +491,7 @@ function onLoad() {
     });
 
     $('#dataWidth').on('change', function () {
+        console.log('data Width change');
         var cropData = cropper.getCropBoxData();
         cropData.height = dataHeight.value !== '' ? Number(dataHeight.value) : 0;
         cropData.width = dataWidth.value !== '' ? Number(dataWidth.value) : 0;
