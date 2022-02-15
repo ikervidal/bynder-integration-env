@@ -356,15 +356,14 @@ function updateUndoRedoResetBtns() {
 }
 
 function updateImageDims() {
-    var cropBoxData = cropper ? cropper.getCropBoxData() : { height: null, width: null };
-    $("#imageHeight").val(cropBoxData.height);
-    $("#imageWidth").val(cropBoxData.width);
+    $("#imageHeight").val(entity.selectedAsset.height);
+    $("#imageWidth").val(entity.selectedAsset.width);
 }
 
 function updateCropImageDims() {
-    console.log(entity.selectedAsset);
-    $("#dataHeight").val(entity.selectedAsset.height);
-    $("#dataWidth").val(entity.selectedAsset.width);
+    var cropBoxData = cropper ? cropper.getCropBoxData() : { height: null, width: null };
+    $("#dataHeight").val(cropBoxData.height);
+    $("#dataWidth").val(cropBoxData.width);
 }
 
 function onLoad() {
