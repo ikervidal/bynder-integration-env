@@ -414,8 +414,10 @@ function onLoad() {
         },
         ready: function () {
             try {
+                console.log('try');
                 onLoaded();
             } finally {
+                console.log('finally');
                 saveCropBoxData(changes[0]);
                 saveCropBoxData(initial);
             }
@@ -496,8 +498,9 @@ function onLoad() {
         console.log(dataHeight.value);
         console.log('dataWidth');
         console.log(dataWidth.value);
-        cropData.height = dataHeight.value !== '' ? Number(dataHeight.value) : 0;
-        cropData.width = dataWidth.value !== '' ? Number(dataWidth.value) : 0;
+        cropData.height = dataHeight.value !== '' ? parseFloat(dataHeight.value) : 0;
+        cropData.width = dataWidth.value !== '' ? parseFloat(dataWidth.value) : 0;
+        //var ratio = document.getElementById('imageToCrop').cropper.imageData.width /  document.getElementById('imageToCrop').cropper.imageData.naturalWidth; 
 
         console.log('2 - cropData');
         console.log(cropData);
